@@ -3,6 +3,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import CreateEventDrawer from "@/components/create-event";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "Schedulrr",
@@ -29,7 +30,9 @@ export default function RootLayout({ children }) {
               <p>Made by Subham Gope</p>
             </div>
           </footer>
-          <CreateEventDrawer />
+          <Suspense fallback={<div>Loading...</div>}>
+            <CreateEventDrawer />
+          </Suspense>
         </body>
       </html>
     </ClerkProvider>

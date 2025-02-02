@@ -35,26 +35,25 @@ const CreateEventDrawer = () => {
   };
 
   return (
-
-      <Drawer open={isOpen} onClose={handleClose}>
-        <DrawerContent>
-          <DrawerHeader>
-            <DrawerTitle>Create New Event</DrawerTitle>
-          </DrawerHeader>
-          <EventForm
-            onSubmitForm={() => {
-              handleClose();
-            }}
-          />
-          <DrawerFooter>
-            <DrawerClose asChild>
-              <Button variant="outline" onClick={handleClose}>
-                Cancel
-              </Button>
-            </DrawerClose>
-          </DrawerFooter>
-        </DrawerContent>
-      </Drawer>
+    <Drawer open={isOpen} onClose={handleClose}>
+      <DrawerContent>
+        <DrawerHeader>
+          <DrawerTitle>Create New Event</DrawerTitle>
+        </DrawerHeader>
+        <EventForm
+          onSubmitForm={() => {
+            handleClose();
+          }}
+        />
+        <DrawerFooter>
+          <DrawerClose asChild>
+            <Button variant="outline" onClick={handleClose}>
+              Cancel
+            </Button>
+          </DrawerClose>
+        </DrawerFooter>
+      </DrawerContent>
+    </Drawer>
   );
 };
 

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { useUser } from "@clerk/nextjs";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { usernameSchema } from "@/app/_lib/validator";
@@ -16,6 +16,8 @@ import { format } from "date-fns";
 
 const Dashboard = () => {
   const { isLoaded, isSignedIn, user } = useUser();
+
+  const [clientOrigin, setClientOrigin] = useState(null);
 
   const {
     register,
@@ -44,6 +46,12 @@ const Dashboard = () => {
 
   useEffect(() => {
     (async () => await fnUpdates())();
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setClientOrigin(window.location.origin);
+    }
   }, []);
 
   return (
@@ -89,7 +97,7 @@ const Dashboard = () => {
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             <div>
               <div className="flex items-center gap-2">
-                <span>{window?.location.origin}</span>
+                <span>{clientOrigin}</span>
                 <Input {...register("username")} placeholder="username" />
               </div>
               {errors.username && (
