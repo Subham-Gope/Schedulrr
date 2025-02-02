@@ -35,7 +35,7 @@ const CreateEventDrawer = () => {
   };
 
   return (
-    <Suspense fallback={<p>Loading...</p>}>
+
       <Drawer open={isOpen} onClose={handleClose}>
         <DrawerContent>
           <DrawerHeader>
@@ -55,7 +55,6 @@ const CreateEventDrawer = () => {
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
-    </Suspense>
   );
 };
 
