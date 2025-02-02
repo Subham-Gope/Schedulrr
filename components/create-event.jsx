@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -35,25 +35,27 @@ const CreateEventDrawer = () => {
   };
 
   return (
-    <Drawer open={isOpen} onClose={handleClose}>
-      <DrawerContent>
-        <DrawerHeader>
-          <DrawerTitle>Create New Event</DrawerTitle>
-        </DrawerHeader>
-        <EventForm
-          onSubmitForm={() => {
-            handleClose();
-          }}
-        />
-        <DrawerFooter>
-          <DrawerClose asChild>
-            <Button variant="outline" onClick={handleClose}>
-              Cancel
-            </Button>
-          </DrawerClose>
-        </DrawerFooter>
-      </DrawerContent>
-    </Drawer>
+    <Suspense fallback={<p>Loading...</p>}>
+      <Drawer open={isOpen} onClose={handleClose}>
+        <DrawerContent>
+          <DrawerHeader>
+            <DrawerTitle>Create New Event</DrawerTitle>
+          </DrawerHeader>
+          <EventForm
+            onSubmitForm={() => {
+              handleClose();
+            }}
+          />
+          <DrawerFooter>
+            <DrawerClose asChild>
+              <Button variant="outline" onClick={handleClose}>
+                Cancel
+              </Button>
+            </DrawerClose>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
+    </Suspense>
   );
 };
 
