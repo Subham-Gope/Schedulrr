@@ -46,4 +46,4 @@ Make sure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/scheduling-nextjs-app.git
+   git clone https://github.com/Subham-Gope/Schedulrr.git
