@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🗓️ Schedulrr
 
-## Getting Started
+**Schedulrr** is an AI-powered scheduling platform that streamlines appointment booking by integrating your calendar, offering customizable scheduling links, and simplifying meeting coordination for professionals and teams. The app is built with **Next.js**, **Prisma**, **Clerk Authentication**, **Tailwind CSS**, and **Radix UI** components.
 
-First, run the development server:
+## ✨ Features  
+- **📅 Seamless Appointment Booking** – Integrates with your calendar for easy scheduling and coordination.  
+- **🔗 Customizable Scheduling Links** – Allows users to create personalized scheduling links to share with clients.  
+- **👥 Team Collaboration** – Facilitates team scheduling and coordination for meetings.  
+- **🛡️ Secure User Authentication** – Built with **Clerk** for secure and easy login/sign-up features.  
+- **🎨 Clean and Responsive UI** – Designed with **Radix UI** and **Tailwind CSS** for a smooth user experience.  
+- **📈 Real-Time Analytics** – View and manage your bookings with beautiful charts and graphs powered by **Recharts**.  
+- **🔒 Data Security** – Secure data storage using **Prisma** and **MongoDB**.  
+- **📅 Date & Time Picker** – Integrated **React Day Picker** for easy selection of dates and times.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠 Tech Stack  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Frontend:  
+- **Next.js**  
+- **React**  
+- **Tailwind CSS**  
+- **Radix UI**  
+- **React Hook Form** (for forms)  
+- **React Day Picker** (for date selection)  
+- **Recharts** (for analytics and charts)  
+- **Sonner** (for notifications)  
+- **Lucide React** (for icons)  
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Backend:  
+- **Node.js**  
+- **Prisma** (for database ORM)  
+- **MongoDB**  
+- **Clerk** (for user authentication)  
+- **Google API** (for calendar integration)  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Installation
 
-## Learn More
+### **Prerequisites:**
+Make sure you have the following installed:
 
-To learn more about Next.js, take a look at the following resources:
+- **Node.js** (v16 or higher)
+- **MongoDB** (You can use MongoDB Atlas for a cloud database)
+- **Google API Key** (for calendar integration)
+- **Clerk API Key** (for authentication)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### **Steps to run the project:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Subham-Gope/Schedulrr.git
