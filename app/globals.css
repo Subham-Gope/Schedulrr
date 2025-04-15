@@ -100,3 +100,6 @@
     scrollbar-width: none; /*  Firefox  */
   }
 }
+body {
+  padding: 0 1rem;
+}
